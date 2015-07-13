@@ -87,6 +87,7 @@
 
         };
 
+        // Shows recommended tracks based on favorited tracks
         $scope.showRecommended = function() {
             var properties = [];
 
@@ -98,14 +99,15 @@
                 properties.push(response.name);
                 properties.push(response.artists[0]);
                 properties.push(response.album.name);
+
+                var propLength = properties.length;
+                var randomProp = properties[Math.floor(Math.random() * propLength)];
+
+                $http.get(baseUrl + randomProp).success(function(response) {
+                    data = $scope.tracks = response.tracks.items;
+                });
             });
 
-            var propLength = properties.length;
-            var randomProp = properties[Math.floor(Math.random() * propLength)];
-
-            $http.get(baseUrl + randomProp).success(function(response) {
-                data = $scope.tracks = response.tracks.items;
-            });
             $('#favorites h2').text('Recommendations');
             $('#recommended').hide();
         };
