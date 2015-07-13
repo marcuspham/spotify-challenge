@@ -1,0 +1,137 @@
+/*
+ * Marcus Pham
+ * July 12, 2015
+ *
+ * The Stylesheet for the Search Spotify page
+ * 
+ * This webpage allows the user to search through
+ * tracks and artists from the Spotify API. After
+ * exploring music, the user can favorite tracks which
+ * then appear on the homepage.
+ *
+ * Future: animations
+ */
+
+body {
+    padding: 10px;
+    background-color: #66CD00;
+    text-align: center;
+    color: #424242;
+}
+
+#logo {
+    margin: 10px;
+    margin-top: 30px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+#favorites {
+    text-align: left;
+    margin-left: 20px;
+}
+
+#recommended {
+    color: purple;
+    opacity: 0.5;
+}
+
+#recommended:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1.0;
+}
+
+.img {
+    margin-bottom: 5px;
+    padding: 5px; 
+    text-align: center;
+}
+
+.album-img {
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+    box-shadow: 2px 5px 5px #458B00;
+}
+
+#artist-img {
+    height: 50px;
+    width: 50px;
+}
+
+#now-playing-img {
+    height: 200px;
+    width: 200px;
+}
+
+.modal-body h4{
+    margin-top: 20px;
+}
+
+#album-name {
+    font-style: italic;
+}
+
+#related li {
+    padding: 1px;
+    list-style-type: none;
+}
+
+.artist-link:hover, #album-name:hover {
+    cursor: pointer;
+    color: #458B00;
+}
+
+#related {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 15%;
+}
+
+.close:hover {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.container-fixed {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.playing {
+    opacity: 0.7;
+}
+
+input {
+    text-align: center;
+}
+
+#search-box {
+    min-height: 70px;
+}
+
+#top {
+    padding: 3px;
+    opacity: 0.5;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}
+
+#top:hover {
+    opacity: 1.0;
+}
+
+#top a {
+    color: #D06700;
+    text-decoration: none;
+}
